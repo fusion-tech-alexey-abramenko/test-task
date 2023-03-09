@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  mysql:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'test-task'
+      MYSQL_USER: 'test-task'
+      MYSQL_PASSWORD: 'test-task'
+      MYSQL_ROOT_PASSWORD: 'test-task'
+    ports:
+      - 3306:3306
+    volumes:
+      - ./db:/var/lib/mysql
